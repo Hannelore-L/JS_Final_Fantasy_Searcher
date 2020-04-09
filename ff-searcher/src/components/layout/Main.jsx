@@ -15,7 +15,7 @@ export default props => (
                </li>
 
                <li>
-                    <Link to="/finalfantasy"></Link>
+                    <Link to="/finalfantasy">Final Fantasy Character Searcher</Link>
                </li>
           </ul>
      </nav>

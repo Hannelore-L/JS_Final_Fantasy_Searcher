@@ -2,4 +2,4 @@
 import React from 'react';
 
 //        -        -        -        H E A D E R   E X P O R T        -        -        -
-export default props => <h1>Header</h1>;
+export default props => <h1>Header placeholder</h1>;

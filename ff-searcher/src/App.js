@@ -62,7 +62,7 @@ export default class App extends React.Component {
                          />
 
                          <Route
-                              path="/about"
+                              exact path="/about"
                               comptonent={ About }
                          />
 
@@ -70,7 +70,7 @@ export default class App extends React.Component {
                               exact path="/finalfantasy"
                               render={ () => (
                                    <>
-                                        <h2>Write the game's number in decimals</h2>
+                                        <h2>Write the game's number in numerals</h2>
                                         {/* Give the function getCharacters to the Form file under the name getCharacters */ }
                                         <CharacterForm getCharacters={ this.getCharacters } />
                                         { this.state.characters.loading && <CharacterLoading /> }
