@@ -8,6 +8,10 @@ import { Switch, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import Characters from './components/pages/searcher/Characters';
+import CharacterInfo from './components/pages/searcher/CharacterInfo';
+import CharacterForm from './components/pages/searcher/CharacterForm';
+import CharacterLoading from './components/pages/searcher/CharacterLoading';
 
 //        -        -        -        C L A S S   A P P        -        -        -
 export default class App extends React.Component {
@@ -50,7 +54,38 @@ export default class App extends React.Component {
      render () {
           return (
                // <p onClick={ this.getCharacters }>Click me</p>
-               <Layout></Layout>
+               <Layout>
+                    <Switch>
+                         <Route
+                              exact path="/"
+                              component={ Home }
+                         />
+
+                         <Route
+                              path="/about"
+                              comptonent={ About }
+                         />
+
+                         <Route
+                              exact path="/finalfantasy"
+                              render={ () => (
+                                   <>
+                                        <h2>Write the game's number in decimals</h2>
+                                        {/* Give the function getCharacters to the Form file under the name getCharacters */ }
+                                        <Form getCharacters={ this.getCharacters } />
+                                        { this.state.characters.loading && <Loading /> }
+                                        { this.state.characters.data.length !== 0 && (
+                                             <Characters characters={ this.state.characters.data } />
+                                        ) }
+                                   </>
+                              ) }
+                         />
+                         <Route
+                              path="/character/:id/:name"
+                              component={ CharacterInfo }
+                         />
+                    </Switch>
+               </Layout>
           ) // end of return
      }; //end of render
 };
