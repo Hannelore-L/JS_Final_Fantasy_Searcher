@@ -26,7 +26,13 @@ const Characters = function ( { characters } ) {
                          { characters.map( character => (
                               <tr key={ character.id }>
                                    <td>{ character.origin }</td>
-                                   <td>{ character.name }</td>
+                                   <td>
+                                        <Link
+                                             to={ `/character/${ slugify( character.name ) }/${ slugify( character.origin ) }/${ character.id }` }
+                                        >
+                                             { character.name }
+                                        </Link>
+                                   </td>
                                    <td>
                                         <img src={ character.picture } alt="character image" />
                                    </td>

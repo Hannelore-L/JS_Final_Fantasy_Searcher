@@ -81,7 +81,7 @@ export default class App extends React.Component {
                               ) }
                          />
                          <Route
-                              path="/character/:id/:name"
+                              path="/character/:name/:origin/:id"
                               component={ CharacterInfo }
                          />
                     </Switch>
