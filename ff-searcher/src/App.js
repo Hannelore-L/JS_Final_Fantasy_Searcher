@@ -1,11 +1,11 @@
+//        -        -        -        R E A C T ' S   I M P O R T S        -        -        -
 import React from 'react';
-// import "./styles.css";
-import axios from "axios";
-import { Switch, Route } from "react-router-dom";
+import axios from 'axios';
+import { Switch, Route } from 'react-router-dom';
 
 
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
-import Layout from "./components/layout/Layout";
+import Layout from './components/layout/Layout';
 
 //        -        -        -        C L A S S   A P P        -        -        -
 export default class App extends React.Component {
