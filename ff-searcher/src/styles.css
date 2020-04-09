@@ -1,0 +1,28 @@
+.error {
+     background-color: red;
+}
+
+img {
+     max-width: 200px;
+     max-height: 200px;
+     margin: 0 auto;
+
+}
+
+table {
+     width: 75%;
+     margin: 0 auto;
+   }
+   
+table,
+th,
+td {
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+
+th,
+td {
+     padding: 15px;
+     text-align: left;
+}

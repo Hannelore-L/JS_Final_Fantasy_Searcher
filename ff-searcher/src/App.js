@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
+import "./styles.css";
 import Layout from './components/layout/Layout';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
@@ -35,7 +36,7 @@ export default class App extends React.Component {
                }
           } );
           axios
-               .get( `https://www.moogleapi.com/api/v1/characters/search?origin=15` )
+               .get( `https://www.moogleapi.com/api/v1/characters/search?origin=${ str }` )
                .then( results => {
                     // console.log( results.data );
                     this.setState( {
@@ -62,8 +63,8 @@ export default class App extends React.Component {
                          />
 
                          <Route
-                              exact path="/about"
-                              comptonent={ About }
+                              path="/about"
+                              component={ About }
                          />
 
                          <Route
@@ -71,7 +72,6 @@ export default class App extends React.Component {
                               render={ () => (
                                    <>
                                         <h2>Write the game's number in numerals</h2>
-                                        {/* Give the function getCharacters to the Form file under the name getCharacters */ }
                                         <CharacterForm getCharacters={ this.getCharacters } />
                                         { this.state.characters.loading && <CharacterLoading /> }
                                         { this.state.characters.data.length !== 0 && (
