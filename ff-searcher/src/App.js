@@ -6,6 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
 import Layout from './components/layout/Layout';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
 
 //        -        -        -        C L A S S   A P P        -        -        -
 export default class App extends React.Component {
