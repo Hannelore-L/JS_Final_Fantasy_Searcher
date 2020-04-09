@@ -72,8 +72,8 @@ export default class App extends React.Component {
                                    <>
                                         <h2>Write the game's number in decimals</h2>
                                         {/* Give the function getCharacters to the Form file under the name getCharacters */ }
-                                        <Form getCharacters={ this.getCharacters } />
-                                        { this.state.characters.loading && <Loading /> }
+                                        <CharacterForm getCharacters={ this.getCharacters } />
+                                        { this.state.characters.loading && <CharacterLoading /> }
                                         { this.state.characters.data.length !== 0 && (
                                              <Characters characters={ this.state.characters.data } />
                                         ) }
@@ -86,6 +86,6 @@ export default class App extends React.Component {
                          />
                     </Switch>
                </Layout>
-          ) // end of return
+          ); // end of return
      }; //end of render
-};
+}; // end of App class
