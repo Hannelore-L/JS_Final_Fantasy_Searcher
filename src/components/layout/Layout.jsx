@@ -1,6 +1,7 @@
 //        -        -        -        R E A C T ' S   I M P O R T S        -        -        -
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Container from '@material-ui/core/Container';
 
 
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
@@ -15,8 +16,10 @@ export default props => {
                <Router>
                     <div className="App">
                          <Header />
-                         <Main />
-                         { props.children }
+                         <Container maxWidth="sm">
+                              <Main />
+                              { props.children }
+                         </Container>
                          <Footer />
                     </div> {/* end of App */ }
                </Router>

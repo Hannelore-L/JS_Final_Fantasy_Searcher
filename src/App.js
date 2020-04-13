@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import { Switch, Route } from 'react-router-dom';
 
-
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
 import "./styles.css";
 import Layout from './components/layout/Layout';
