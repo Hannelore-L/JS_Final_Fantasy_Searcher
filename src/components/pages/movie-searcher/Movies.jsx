@@ -23,7 +23,10 @@ const Movies = function ( { movies } ) {
                          { movies.map( movie => (
                               <tr key={ movie.imdbID }>
                                    <td>
-                                        <img src={ movie.Poster } alt="movie poster" />
+                                        {movie.Poster !== "N/A" && (
+                                             <img src={movie.Poster} alt="movieposter" />
+                                        )}
+                                        {movie.Poster === "N/A" && <p>No movie poster available</p>}
                                    </td>
 
                                    <td>
