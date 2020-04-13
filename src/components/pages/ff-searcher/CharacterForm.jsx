@@ -76,7 +76,7 @@ export default class Form extends Component {
                          this.props.getCharacters( this.state.searchField.value )
                }; // end of switch
           }; // end of if else
-     }; // end of sumbitHandler
+     }; // end of submitHandler
 
      render () {
           return (

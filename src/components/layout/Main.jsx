@@ -17,6 +17,10 @@ export default props => (
                <li>
                     <Link to="/finalfantasy">Final Fantasy Character Searcher</Link>
                </li>
+
+               <li>
+                    <Link to="/moviemagic">Movie Searcher</Link>
+               </li>
           </ul>
      </nav>
 );
