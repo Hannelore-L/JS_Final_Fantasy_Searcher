@@ -5,6 +5,9 @@ import { Switch, Route } from 'react-router-dom';
 
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
 import "./styles.css";
+// import { Home, About } from './components/pages';
+// import { Characters, CharacterInfo, CharacterForm, CharacterLoading } from './components/pages/ff-searcher';
+// import { Movies, MovieInfo, MovieForm, MovieLoading } from './components/pages/movie-searcher'
 import Layout from './components/layout/Layout';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
