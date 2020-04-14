@@ -1,6 +1,9 @@
 //        -        -        -        R E A C T ' S   I M P O R T S        -        -        -
 import React, { Component } from 'react';
 
+//        -        -        -        M A T E R I A L - U I   I M P O R T S        -        -        -
+import { TextField, Button } from '@material-ui/core/';
+
 //        -        -        -        C L A S S   F O R M        -        -        -
 export default class Form extends Component {
      constructor ( props ) {
@@ -84,17 +87,21 @@ export default class Form extends Component {
                     action=""
                     onSubmit={ this.submitHandler }
                >
-                    <input
-                         type="text"
-                         value={ this.state.searchField.value }
-                         onChange={ this.changeHandler }
-                         className={ this.state.searchField.error ? "error" : "" }
-                    />
 
-                    <input
-                         type="submit"
-                         value="Summon the characters!"
-                    />
+               <TextField
+                    id="gameNr"
+                    label="Number"
+                    value={ this.state.searchField.value }
+                    onChange={ this.changeHandler }
+                    className={ this.state.searchField.error ? "error" : "" }
+               />
+
+               <Button
+                    variant="contained"
+                    type="submit"
+               >
+                    Summon the characters!
+               </Button>
                </form>
           ); // end of return
      }; // end of render
