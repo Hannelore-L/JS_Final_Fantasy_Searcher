@@ -2,25 +2,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//        -        -        -        M A T E R I A L - U I   I M P O R T S        -        -        -
+import { Typography } from '@material-ui/core/';
+
 //        -        -        -        M A I N   E X P O R T        -        -        -
 export default props => (
      <nav>
-          <ul>
-               <li>
-                    <Link to="/">Home</Link>
-               </li>
+          <Typography className="mainNav">
+               {/* <Link 
+                    to="/"
+               >
+                    Home
+               </Link>
 
-               <li>
-                    <Link to="/about">About</Link>
-               </li>
+               <Link 
+                    to="/about"
+               >
+                    About
+               </Link>
+ */}
+               <Link 
+                    to="/finalfantasy"
+               >
+                    Final Fantasy Character Searcher
+               </Link>
 
-               <li>
-                    <Link to="/finalfantasy">Final Fantasy Character Searcher</Link>
-               </li>
-
-               <li>
-                    <Link to="/moviemagic">Movie Searcher</Link>
-               </li>
-          </ul>
+               <Link 
+                    to="/moviemagic"
+               >
+                    Movie Searcher
+               </Link>
+          </Typography>
      </nav>
 );
