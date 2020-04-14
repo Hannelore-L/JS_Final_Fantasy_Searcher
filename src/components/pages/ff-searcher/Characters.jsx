@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//        -        -        -        M A T E R I A L - U I   I M P O R T S        -        -        -
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core/';
+
 //        -        -        -        L O C A L   I M P O R T S        -        -        -
 import { slugify } from '../../../Helpers';
 
@@ -11,35 +14,39 @@ const Characters = function ( { characters } ) {
           console.log( characters );
           return <p>No characters found</p>;
      } else {
-          console.log( characters );
           return (
-               <table>
-                    <caption>They have arrived!</caption>
-                    <thead>
-                         <tr>
-                              <th>Game</th>
-                              <th>Name</th>
-                              <th>Image</th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                         { characters.map( character => (
-                              <tr key={ character.id }>
-                                   <td>{ character.origin }</td>
-                                   <td>
-                                        <Link
-                                             to={ `/character/${ slugify( character.name ) }/${ slugify( character.origin ) }/${ character.id }` }
-                                        >
-                                             { character.name }
-                                        </Link>
-                                   </td>
-                                   <td>
-                                        <img src={ character.picture } alt="character image" />
-                                   </td>
-                              </tr>
-                         ) ) }
-                    </tbody>
-               </table>
+               <TableContainer component={Paper}>
+                    <Table className="movieTable" aria-label="simple table">
+                         <TableHead>
+                              <TableRow>
+                                   <TableCell>Game</TableCell>
+                                   <TableCell align="right">Name</TableCell>
+                                   <TableCell align="right">Image</TableCell>
+                              </TableRow>
+                         </TableHead>
+                         <TableBody>
+                              { characters.map( character => (
+                                   <TableRow key={character.id}>
+                                        <TableCell component="th" scope="row">
+                                             { character.origin }
+                                        </TableCell>
+
+                                        <TableCell align="right">
+                                             <Link
+                                                  to={ `/character/${ slugify( character.name ) }/${ slugify( character.origin ) }/${ character.id }` }
+                                             >
+                                                  { character.name }
+                                             </Link>
+                                        </TableCell>
+
+                                        <TableCell align="right">
+                                             <img src={ character.picture } alt="character image" />
+                                        </TableCell>
+                                   </TableRow>
+                              ))}
+                         </TableBody>
+                    </Table>
+               </TableContainer>
           ); // end of return
      }; // end of if else
 }; // end of export Characters
