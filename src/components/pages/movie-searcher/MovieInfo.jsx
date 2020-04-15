@@ -24,8 +24,7 @@ export default class MovieInfo extends React.Component {
                }
           } );
           axios
-               // .get( `${process.env.REACT_APP_ENDPOINTMOVIES}&i=${ this.props.match.params.id }` )
-               .get( `https://www.omdbapi.com/?apikey=ac33821e&plot=full&i=${ this.props.match.params.id }` )
+               .get( `${process.env.REACT_APP_ENDPOINTMOVIES}&i=${ this.props.match.params.id }` )
                .then( results => {
                     console.log(results)
                     this.setState( {

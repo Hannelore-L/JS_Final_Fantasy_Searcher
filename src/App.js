@@ -69,9 +69,7 @@ export default class App extends React.Component {
                }
           } );
           axios
-               // .get( `${process.env.REACT_APP_ENDPOINTMOVIES}&s=${ str }` )
-               // .get( process.env.REACT_APP_ENDPOINTMOVIES + "&s=" + str )
-               .get( `https://www.omdbapi.com/?apikey=ac33821e&s=${ str }` )
+               .get( `${process.env.REACT_APP_ENDPOINTMOVIES}&s=${ str }` )
                .then( results => {
                     // console.log( results.data );
                     this.setState( {
